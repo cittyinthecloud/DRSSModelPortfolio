@@ -1,0 +1,88 @@
+/* BEGIN GRID */
+#container {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  grid-template-columns: auto 600px;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 'header header'
+                       'main aside'
+                       'footer footer';
+}
+
+header {
+   grid-area: header;
+}
+
+
+
+main {
+   grid-area: main;
+}
+
+aside {
+   grid-area: aside;
+
+}
+
+/* HACK: Sometimes browsers disobey the width of the grid cell for the aside.
+         This fixes that. Because of this hack, be sure that other pages
+         stylesheets that affect elements in the aside are placed after this one.
+*/
+aside * {
+  height: auto;
+  width: 600px;
+}
+
+footer {
+   padding-left: 10px;
+   padding-top: 40px;
+   grid-area: footer;
+   height:auto;
+
+}
+
+/* END GRID */
+
+
+/* BEGIN GENERAL STYLES */
+
+body {
+  margin:20px;
+  background-color:#000;
+  color:#eee;
+}
+
+a {
+  color:#3e50b4;
+}
+
+a:hover {
+  color:#5c6dc6;
+}
+
+a:visited {
+  color:#ff3f80
+}
+
+header {
+  background-color:#212121;
+}
+
+footer {
+  background-color:#212121;
+}
+
+
+/* END GENERAL STYLES */
+
+/* BEGIN HEADER LINKS */
+
+header a {
+  color:#b3b3b3;
+}
+
+header a:hover {
+  color:#ffffff;
+}
+/* END HEADER LINKS */
