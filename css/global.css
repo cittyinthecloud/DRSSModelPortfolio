@@ -1,9 +1,10 @@
 /* BEGIN GRID */
 #container {
+  width:100%;
   display: grid;
   grid-column-gap: 20px;
   grid-row-gap: 10px;
-  grid-template-columns: auto 600px;
+  grid-template-columns: auto 50%;
   grid-template-rows: auto auto auto;
   grid-template-areas: 'header header'
                        'main aside'
@@ -31,7 +32,7 @@ aside {
 */
 aside * {
   height: auto;
-  width: 600px;
+  width: 100%;
 }
 
 footer {
